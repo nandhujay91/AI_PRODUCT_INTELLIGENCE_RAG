@@ -1,0 +1,39 @@
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files
+data/raw/
+data/interim/
+data/processed/
+data/embeddings/
+
+# Vector database
+storage/chroma/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example

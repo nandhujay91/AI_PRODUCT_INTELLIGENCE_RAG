@@ -1,0 +1,46 @@
+[project]
+name = "ai-product-intelligence-rag"
+version = "0.1.0"
+description = "AI-powered product intelligence assistant using Retrieval-Augmented Generation (RAG)"
+readme = "README.md"
+authors = [
+    { name = "Nandini Arjunan", email = "nandhujay91@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.5.9",
+    "fastapi>=0.165.0",
+    "langchain>=1.5.2",
+    "langchain-community>=0.4.2",
+    "langchain-openai>=1.8.5",
+    "numpy>=2.5.5",
+    "pandas>=3.1.1",
+    "psycopg[binary]>=3.3.9",
+    "pydantic>=2.14.4",
+    "pydantic-settings>=2.16.3",
+    "python-dotenv>=1.2.4",
+    "pyyaml>=6.0.3",
+    "sentence-transformers>=6.3.0",
+    "sqlalchemy>=2.1.9",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+ai-product-intelligence-rag = "ai_product_intelligence_rag:main"
+
+[build-system]
+requires = ["uv_build>=0.11.19,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
