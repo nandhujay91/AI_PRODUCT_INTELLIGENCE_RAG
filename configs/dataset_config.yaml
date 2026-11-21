@@ -1,0 +1,37 @@
+
+dataset:
+  name: "Amazon Reviews 2023"
+  repository: "McAuley-Lab/Amazon-Reviews-2023"
+  category: "Electronics"
+  source_type: "Hugging Face Parquet"
+  streaming: true
+
+processing:
+  sample_size: 1000
+  batch_size: 100
+  minimum_document_length: 30
+
+quality:
+  allow_missing_price: true
+  allow_missing_description: true
+  allow_missing_features: true
+  detect_duplicate_product_ids: true
+  detect_duplicate_documents: true
+
+documents:
+  content_fields:
+    - title
+    - description
+    - features
+
+  metadata_fields:
+    - parent_asin
+    - title
+    - price
+    - average_rating
+    - rating_number
+    - main_category
+    - store
+
+embeddings:
+  status: "not_started"

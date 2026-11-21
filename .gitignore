@@ -1,16 +1,19 @@
 
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
 
 # Environment variables and secrets
 .env
 .env.*
+!.env.example
 
 # Python cache
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.ruff_cache/
+.mypy_cache/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -28,12 +31,18 @@ storage/chroma/
 logs/
 *.log
 
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Coverage
+.coverage
+htmlcov/
+
 # IDE
 .vscode/
 
 # Operating system
 .DS_Store
 Thumbs.db
-.env
-.env.*
-!.env.example
